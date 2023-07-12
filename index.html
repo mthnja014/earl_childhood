@@ -355,6 +355,8 @@ layer.bindPopup(feature.properties.Name);
           }
 }).addTo(map);
 
+   var river_ = L.layerGroup([river]);
+
  var deep = {"type":"FeatureCollection",
              "features":[{"type":"Feature","id":1,
                           "geometry":{"type":"Polygon",
@@ -393,6 +395,7 @@ onEachFeature: function(feature, layer) {
 layer.bindPopup(feature.properties.Type);
           }
 }).addTo(map);
+  var deep_ = L.layerGroup([deep]);
 </script>
 </body>
 </html>
