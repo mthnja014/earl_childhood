@@ -81,7 +81,13 @@ L.control.scale({maxWidth: 100, metric: true, imperial: true}).setPosition('bott
     "opacity": 0.65
 };
 
-      var hiking_style = {
+    var hiking_style = {
+    "color": "rgb(255, 0, 0)",
+    "weight": 5,
+    "opacity": 0.65
+};
+
+      var local_road_style = {
     "color": "rgb(255, 0, 0)",
     "weight": 5,
     "opacity": 0.65
@@ -597,15 +603,15 @@ var local_road = {"type":"FeatureCollection",
                                               "Name":null,"Type":"Access Rd"}
                                }
                               ]}
-        L.geoJSON(hiking, {
-  style : hiking_style
+        L.geoJSON(local_road, {
+  style : local_road_style
 }).addTo(map);
-L.geoJSON(hiking, {
+L.geoJSON(local_road, {
 onEachFeature: function(feature, layer) {
-layer.bindPopup(feature.properties.Type);
+layer.bindPopup(feature.properties.Name);
           }
 }).addTo(map);
-  var hiking_ = L.layerGroup([hiking]);
+  var local_road_ = L.layerGroup([local_road]);
 
 </script>
 </body>
