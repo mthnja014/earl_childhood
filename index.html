@@ -81,6 +81,11 @@ L.control.scale({maxWidth: 100, metric: true, imperial: true}).setPosition('bott
     "opacity": 0.65
 };
 
+      var school_style = {
+    "color": "rgb(255, 0, 0)",
+    "weight": 5,
+    "opacity": 0.65
+};
     var hiking_style = {
     "color": "rgb(255, 0, 0)",
     "weight": 5,
@@ -913,6 +918,79 @@ layer.bindPopup(feature.properties.Name);
           }
 }).addTo(map);
   var main_road_ = L.layerGroup([main_road]);
+
+  var school = {"type":"FeatureCollection",
+                "features":[{"type":"Feature","id":1,
+                             "geometry":{"type":"Polygon",
+                                         "coordinates":[[
+                                           [30.889835363025004,-29.626619954339557],
+                                           [30.889877448197758,-29.626855774212142],
+                                           [30.889976192810433,-29.626842465020015],
+                                           [30.889940966274889,-29.62661353555221],
+                                           [30.889835363025004,-29.626619954339557]
+                                         ]]
+                                        },
+                             "properties":{"OBJECTID":1,
+                                           "Shape_Length":83.046881682768969,
+                                           "Shape_Area":343.9051554626833,
+                                           "Name":"New River C. School"}
+                            },
+                            {"type":"Feature","id":2,
+                             "geometry":{"type":"Polygon",
+                                         "coordinates":[[
+                                           [30.890040442116177,-29.626609315706887],
+                                           [30.890073138995895,-29.626832918851772],
+                                           [30.890170230708414,-29.626825190554413],
+                                           [30.89014142353389,-29.626597697075571],
+                                           [30.890040442116177,-29.626609315706887]
+                                         ]]
+                                        },
+                             "properties":{"OBJECTID":2,
+                                           "Shape_Length":80.367222881786489,
+                                           "Shape_Area":322.67932127041144,
+                                           "Name":"New River C. School"}
+                            },
+                            {"type":"Feature","id":3,
+                             "geometry":{"type":"Polygon",
+                                         "coordinates":[[
+                                           [30.889921127880154,-29.626902438362244],
+                                           [30.889923284735119,-29.626994553123382],
+                                           [30.890174318042973,-29.62696742096054],
+                                           [30.890155431862429,-29.626876322870398],
+                                           [30.889921127880154,-29.626902438362244]
+                                         ]]
+                                        },
+                             "properties":{"OBJECTID":3,
+                                           "Shape_Length":78.109193581799047,
+                                           "Shape_Area":320.89978224653248,
+                                           "Name":"New River C. School"}
+                            },
+                            {"type":"Feature","id":4,
+                             "geometry":{"type":"Polygon",
+                                         "coordinates":[[
+                                           [30.889779261438907,-29.626458052407504],
+                                           [30.889789855271044,-29.626550568163765],
+                                           [30.890127136727624,-29.626524586110364],
+                                           [30.89011520440571,-29.626428499385135],
+                                           [30.889779261438907,-29.626458052407504]
+                                         ]]
+                                        },
+                             "properties":{"OBJECTID":4,
+                                           "Shape_Length":99.563891394293492,
+                                           "Shape_Area":456.97739912368496,
+                                           "Name":"New River C. School"}
+                            }
+                           ]}
+          L.geoJSON(school_road, {
+  style : school_style
+}).addTo(map);
+L.geoJSON(school_road, {
+onEachFeature: function(feature, layer) {
+layer.bindPopup(feature.properties.Name);
+          }
+}).addTo(map);
+  var school_ = L.layerGroup([school]);
+
 </script>
 </body>
 </html>
