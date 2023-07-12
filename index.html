@@ -74,6 +74,12 @@ L.control.scale({maxWidth: 100, metric: true, imperial: true}).setPosition('bott
     "weight": 5,
     "opacity": 0.65
 };
+
+    var deep_style = {
+    "color": "rgb(255, 0, 0)",
+    "weight": 5,
+    "opacity": 0.65
+};
   var river = {"type":"FeatureCollection",
                "features":[{"type":"Feature","id":1,
                  "geometry":{"type":"LineString",
@@ -346,6 +352,45 @@ L.control.scale({maxWidth: 100, metric: true, imperial: true}).setPosition('bott
 L.geoJSON(river, {
 onEachFeature: function(feature, layer) {
 layer.bindPopup(feature.properties.Name);
+          }
+}).addTo(map);
+
+ var deep = {"type":"FeatureCollection",
+             "features":[{"type":"Feature","id":1,
+                          "geometry":{"type":"Polygon",
+                                      "coordinates":[[
+                                        [30.898007253621337,-29.655891838015599],
+                                        [30.898025322334956,-29.655894675668726],
+                                        [30.898080955898831,-29.655758919442032],
+                                        [30.898130850126314,-29.655756483819005],
+                                        [30.898180685963361,-29.655787443549922],
+                                        [30.898333725650104,-29.655801399196456],
+                                        [30.898411216123126,-29.655787530982529],
+                                        [30.898461322353061,-29.655798987774549],
+                                        [30.898498260179213,-29.655772319270934],
+                                        [30.898504958916302,-29.655724591203388],
+                                        [30.898483325687636,-29.655690415179574],
+                                        [30.898438635400566,-29.655669852103916],
+                                        [30.898404865932378,-29.655686787503917],
+                                        [30.898361767460003,-29.655756952988707],
+                                        [30.898091639562477,-29.655734442989068],
+                                        [30.898059728708652,-29.655741724878887],
+                                        [30.898038968642428,-29.655762067016344],
+                                        [30.898007253621337,-29.655891838015599]
+                                      ]]
+                                     },
+                          "properties":{"OBJECTID":1,
+                                        "Shape_Length":155.60906858037401,
+                                        "Shape_Area":410.61234235344051,
+                                        "Type":"Deep Tunnel"}
+                         }
+                        ]} 
+    L.geoJSON(deep, {
+  style : deep_style
+}).addTo(map);
+L.geoJSON(deep, {
+onEachFeature: function(feature, layer) {
+layer.bindPopup(feature.properties.Type);
           }
 }).addTo(map);
 </script>
