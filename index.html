@@ -842,32 +842,29 @@ var grazing2 =
   main_road.bindPopup("OBJECTID:1 </br> Shape Length: 1987 </br> Name:M25 <br> Type : Main Rd.");
   var main_road_ = L.layerGroup([main_roadd]); 
 
-  var school = [{"type":"FeatureCollection",
-                "features":[{"type":"Feature","id":1,
-                             "geometry":{"type":"Polygon",
-                                         "coordinates":[[
-                                           [30.889835363025004,-29.626619954339557],
-                                           [30.889877448197758,-29.626855774212142],
-                                           [30.889976192810433,-29.626842465020015],
-                                           [30.889940966274889,-29.62661353555221],
-                                           [30.889835363025004,-29.626619954339557]
-                                         ]]
-                                        },
-                             "properties":{"OBJECTID":1,
-                                           "Shape_Length":83.046881682768969,
-                                           "Shape_Area":343.9051554626833,
-                                           "Name":"New River C. School"}
-                            },
-                            {"type":"Feature","id":2,
-                             "geometry":{"type":"Polygon",
-                                         "coordinates":[[
-                                           [30.890040442116177,-29.626609315706887],
-                                           [30.890073138995895,-29.626832918851772],
-                                           [30.890170230708414,-29.626825190554413],
-                                           [30.89014142353389,-29.626597697075571],
-                                           [30.890040442116177,-29.626609315706887]
-                                         ]]
-                                        },
+  var school =
+  [
+                                           [-29.626619954339557, 30.889835363025004],
+                                           [-29.626855774212142, 30.889877448197758],
+                                           [-29.626842465020015, 30.889976192810433],
+                                           [-29.62661353555221,  30.889940966274889],
+                                           [-29.626619954339557, 30.889835363025004]
+]; 
+var schooll = L.polygon(school, {color: 'blue'}).addTo(map);
+schooll.bindPopup("OBJECTID:1 </br> Name : New River C. School </br> Shape Area: 344 <br> Type : Main Rd.");
+var school_ = L.layerGroup([schooll]); 
+
+var school2 = 
+  [
+                                           [-29.626609315706887, 30.89004044211617],
+                                           [-29.626832918851772, 30.89007313899589],
+                                           [-29.626825190554413, 30.89017023070841],
+                                           [-29.626597697075571, 30.89014142353389],
+                                           [-29.626609315706887, 30.89004044211617]
+];
+  var schooll2 = L.polygon(school2, {color: 'blue'}).addTo(map);
+schooll2.bindPopup("OBJECTID:2 </br> Name : New River C. School </br> Shape Area: 323 </br> Type : Main Rd.");
+var school_ = L.layerGroup([schooll]); 
                              "properties":{"OBJECTID":2,
                                            "Shape_Length":80.367222881786489,
                                            "Shape_Area":322.67932127041144,
