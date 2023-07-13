@@ -860,7 +860,7 @@ layer.bindPopup(feature.properties.Name);
                                            "Type":"Grazing Field"}
                             }
                            ]}
-      L.geoJSON(grazing, {
+  L.geoJSON(grazing, {
   style : grazing_style
 }).addTo(map);
 L.geoJSON(grazing, {
@@ -868,7 +868,8 @@ onEachFeature: function(feature, layer) {
 layer.bindPopup(feature.properties.Type);
           }
 }).addTo(map);
-  var grazing_ = L.layerGroup([grazing]);
+
+   var grazing_ = L.layerGroup([grazing]);
 
   var main_road = {"type":"FeatureCollection",
                    "features":[{"type":"Feature","id":1,
