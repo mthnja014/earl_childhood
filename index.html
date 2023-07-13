@@ -407,7 +407,7 @@ layer.bindPopup(feature.properties.Name);
                                         [-29.655891838015599, 30.898007253621337]
                                       ];
 var deepp = L.polygon(deep, {color: 'red'}).addTo(map);
-  deepp.bindPopup("OBJECTID:1 </br> Shape_Length :155.60906858037401 </br> Shape_Area:410.61234235344051 </br> Type : Deep Tunnel");
+  deepp.bindPopup("OBJECTID:1 </br> Shape Length :155.60906858037401 </br> Shape Area:410.61234235344051 </br> Type : Deep Tunnel");
   var deepp_ = L.layerGroup([deepp]);
 
   var hiking = [
@@ -451,15 +451,11 @@ var deepp = L.polygon(deep, {color: 'red'}).addTo(map);
                                                         [30.892779792591352,-29.628817976080775]
   ];
  var hikingg = L.polygon(hiking, {color: 'green'}).addTo(map);
-  hikingg.bindPopup("OBJECTID:1 </br> Shape Length":904.9164095437061 </br> Type : Hiking Trail");
-  var deepp_ = L.layerGroup([deepp]);                                       },
-                             "properties":{"OBJECTID":1,
-                                           "Shape Length":904.9164095437061,
-                                           "Type":"Hiking Trail"}
-                            },
-                            {"type":"Feature","id":2,
-                             "geometry":{"type":"LineString",
-                                         "coordinates":[[30.89475889345168,-29.651758115222304],
+  hikingg.bindPopup("OBJECTID:1 </br> Shape Length:904.9164095437061 </br> Type : Hiking Trail");
+  var hikingg_ = L.layerGroup([hikingg]);
+
+var hiking2  = [
+                                                        [30.89475889345168,-29.651758115222304],
                                                         [30.894664750908198,-29.651875237367157],
                                                         [30.894545313602979,-29.651984858624928],
                                                         [30.894477607580011,-29.652086786192854],
@@ -499,15 +495,14 @@ var deepp = L.polygon(deep, {color: 'red'}).addTo(map);
                                                         [30.89823849973839,-29.655451968803206],
                                                         [30.898524448764697,-29.655498566618256],
                                                         [30.898539332950634,-29.655632719742343],
-                                                        [30.898491330575105,-29.65570306091082]]
-                                        },
-                             "properties":{"OBJECTID":2,
-                                           "Shape_Length":800.39597750895314,
-                                           "Type":"Hiking Trail"}
-                            },
-                            {"type":"Feature","id":3,
-                             "geometry":{"type":"LineString",
-                                         "coordinates":[[30.893204737043252,-29.633562123813626],
+                                                        [30.898491330575105,-29.65570306091082]
+];
+   var hikingg2 = L.polygon(hiking, {color: 'green'}).addTo(map);
+  hikingg2.bindPopup("OBJECTID:2 </br> Shape Length: 800.395977508953141 </br> Type : Hiking Trail");
+  var hikingg2_ = L.layerGroup([hikingg2]);
+
+  var hiking3 = [
+                                                        [30.893204737043252,-29.633562123813626],
                                                         [30.893240510652799,-29.633661303589221],
                                                         [30.893285642012671,-29.633782502360503],
                                                         [30.893402726630161,-29.634107356043906],
@@ -518,22 +513,11 @@ var deepp = L.polygon(deep, {color: 'red'}).addTo(map);
                                                         [30.892853811974124,-29.634604845679846],
                                                         [30.892808692292345,-29.63466219087244],
                                                         [30.89277636012865,-29.634748335481941],
-                                                        [30.892755831827778,-29.634785985416908]]
-                                        },
-                             "properties":{"OBJECTID":3,
-                                           "Shape_Length":199.5874690801877,
-                                           "Type":"Hiking Trail"}
-                            }]
-               }];
-      L.geoJSON(hiking, {
-  style : hiking_style
-}).addTo(map);
-L.geoJSON(hiking, {
-onEachFeature: function(feature, layer) {
-layer.bindPopup(feature.properties.Type);
-          }
-}).addTo(map);
-  var hiking_ = L.layerGroup([hiking]);
+                                                        [30.892755831827778,-29.634785985416908]
+  ];
+     var hikingg3 = L.polygon(hiking, {color: 'green'}).addTo(map);
+  hikingg3.bindPopup("OBJECTID:2 </br> Shape Length: 199.5874690801877 </br> Type : Hiking Trail");
+  var hikingg3_ = L.layerGroup([hikingg3]);
 
 var local_road = [{"type":"FeatureCollection",
                    "features":[{"type":"Feature","id":1,
