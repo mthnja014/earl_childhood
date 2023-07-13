@@ -407,6 +407,7 @@ layer.bindPopup(feature.properties.Name);
                                         [-29.655891838015599, 30.898007253621337]
                                       ];
 var deepp = L.polygon(deep, {color: 'red'}).addTo(map);
+  deepp.bindPoup("OBJECTID:1 <br> Shape_Length :155.60906858037401 <br> Shape_Area:410.61234235344051 <br> Type : Deep Tunnel");
   var deepp_ = L.layerGroup([deepp]);
 
   var hiking = [{"type":"FeatureCollection",
