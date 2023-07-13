@@ -410,13 +410,11 @@ var deepp = L.polygon(deep, {color: 'red'}).addTo(map);
   deepp.bindPopup("OBJECTID:1 </br> Shape_Length :155.60906858037401 </br> Shape_Area:410.61234235344051 </br> Type : Deep Tunnel");
   var deepp_ = L.layerGroup([deepp]);
 
-  var hiking = [{"type":"FeatureCollection",
-                "features":[{"type":"Feature","id":1,
-                             "geometry":{"type":"LineString",
-                                         "coordinates":[[30.894557130940534,-29.633460305545132],
+  var hiking = [
+                                                        [30.894557130940534,-29.633460305545132],
                                                         [30.894574722648752,-29.633408273160239],
                                                         [30.894596534642183,-29.633325406077759],
-                                                        [30.894603424720383,-29.633265287422219],
+                                                        [30.894603424720383,-29.633265287422219],  
                                                         [30.894601646056127,-29.633189037700873],
                                                         [30.894613247798009,-29.633133350139438],
                                                         [30.894616187085646,-29.633063278201071],
@@ -450,10 +448,13 @@ var deepp = L.polygon(deep, {color: 'red'}).addTo(map);
                                                         [30.89310967642157,-29.628470190223627],
                                                         [30.892895995063224,-29.628594275049128],
                                                         [30.892858594604707,-29.628685425465068],
-                                                        [30.892779792591352,-29.628817976080775]]
-                                        },
+                                                        [30.892779792591352,-29.628817976080775]
+  ];
+ var hikingg = L.polygon(hiking, {color: 'green'}).addTo(map);
+  hikingg.bindPopup("OBJECTID:1 </br> Shape Length":904.9164095437061 </br> Type : Hiking Trail");
+  var deepp_ = L.layerGroup([deepp]);                                       },
                              "properties":{"OBJECTID":1,
-                                           "Shape_Length":904.9164095437061,
+                                           "Shape Length":904.9164095437061,
                                            "Type":"Hiking Trail"}
                             },
                             {"type":"Feature","id":2,
