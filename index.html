@@ -851,7 +851,7 @@ var grazing2 =
                                            [-29.626619954339557, 30.889835363025004]
 ]; 
 var schooll = L.polygon(school, {color: 'blue'}).addTo(map);
-schooll.bindPopup("OBJECTID:1 </br> Name : New River C. School </br> Shape Area: 344 <br> Type : Main Rd.");
+schooll.bindPopup("OBJECTID:1 </br> Name : New River C. School </br> Shape Area: 340");
 var school_ = L.layerGroup([schooll]); 
 
 var school2 = 
@@ -863,54 +863,32 @@ var school2 =
                                            [-29.626609315706887, 30.89004044211617]
 ];
   var schooll2 = L.polygon(school2, {color: 'blue'}).addTo(map);
-schooll2.bindPopup("OBJECTID:2 </br> Name : New River C. School </br> Shape Area: 323 </br> Type : Main Rd.");
-var school_ = L.layerGroup([schooll]); 
-                             "properties":{"OBJECTID":2,
-                                           "Shape_Length":80.367222881786489,
-                                           "Shape_Area":322.67932127041144,
-                                           "Name":"New River C. School"}
-                            },
-                            {"type":"Feature","id":3,
-                             "geometry":{"type":"Polygon",
-                                         "coordinates":[[
-                                           [30.889921127880154,-29.626902438362244],
-                                           [30.889923284735119,-29.626994553123382],
-                                           [30.890174318042973,-29.62696742096054],
-                                           [30.890155431862429,-29.626876322870398],
-                                           [30.889921127880154,-29.626902438362244]
-                                         ]]
-                                        },
-                             "properties":{"OBJECTID":3,
-                                           "Shape_Length":78.109193581799047,
-                                           "Shape_Area":320.89978224653248,
-                                           "Name":"New River C. School"}
-                            },
-                            {"type":"Feature","id":4,
-                             "geometry":{"type":"Polygon",
-                                         "coordinates":[[
-                                           [30.889779261438907,-29.626458052407504],
-                                           [30.889789855271044,-29.626550568163765],
-                                           [30.890127136727624,-29.626524586110364],
-                                           [30.89011520440571,-29.626428499385135],
-                                           [30.889779261438907,-29.626458052407504]
-                                         ]]
-                                        },
-                             "properties":{"OBJECTID":4,
-                                           "Shape_Length":99.563891394293492,
-                                           "Shape_Area":456.97739912368496,
-                                           "Name":"New River C. School"}
-                            }]
-                }];
-          L.geoJSON(school, {
-  style : school_style
-}).addTo(map);
-L.geoJSON(school, {
-onEachFeature: function(feature, layer) {
-layer.bindPopup(feature.properties.Name);
-          }
-}).addTo(map);
-  var school_ = L.layerGroup([school]);
+schooll2.bindPopup("OBJECTID:2 </br> Name : New River C. School </br> Shape Area: 320");
+var schooll2_ = L.layerGroup([schooll2]); 
 
+var school3 = 
+  [
+                                           [-29.626902438362244, 30.889921127880154],
+                                           [-29.626994553123382, 30.889923284735119],
+                                           [-29.62696742096054 , 30.890174318042973],
+                                           [-29.626876322870398, 30.890155431862429],
+                                           [-29.626902438362244, 30.889921127880154]
+];
+  var schooll3 = L.polygon(school3, {color: 'blue'}).addTo(map);
+schooll3.bindPopup("OBJECTID:3 </br> Name : New River C. School </br> Shape Area: 320");
+var schooll3_ = L.layerGroup([schooll3]);
+
+  var school4 = 
+  [
+                                           [-29.62645805240750, 30.889779261438907],
+                                           [-29.62655056816376, 30.889789855271044],
+                                           [-29.62652458611036, 30.890127136727624],
+                                           [29.626428499385135, 30.89011520440571],
+                                           [-29.62645805240750, 30.889779261438907]
+];
+    var schooll4 = L.polygon(school4, {color: 'blue'}).addTo(map);
+schooll4.bindPopup("OBJECTID:4 </br> Name : New River C. School </br> Shape Area: 460");
+var schooll3_ = L.layerGroup([schooll3]);
 </script>
 </body>
 </html>
