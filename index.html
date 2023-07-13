@@ -838,7 +838,7 @@ var grazing2 =
                                                            [-29.651397953584937, 30.894063747440402],
                                                            [-29.65163371934209, 30.893927304128532]
   ];
-  var main_roadd = L.polygon(main_road, {color: 'brown'}).addTo(map);
+  var main_roadd = L.polyline(main_road, {color: 'brown'}).addTo(map);
   main_road.bindPopup("OBJECTID:1 </br> Shape Length: 1987 </br> Name:M25 <br> Type : Main Rd.");
   var main_road_ = L.layerGroup([main_roadd]); 
 
