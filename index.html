@@ -65,10 +65,10 @@ const gl = L.maplibreGL({
 attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
 style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${key}`
 }).addTo(map);
-  L.esri.basemapLayer("Gray").addTo(map);
-  L.esri.basemapLayer("Imagery").addTo(map);
-  L.esri.basemapLayer("Topographic").addTo(map);
   
+var imag = L.esri.basemapLayer("Imagery").addTo(map);
+var topo = L.esri.basemapLayer("Topographic").addTo(map);
+
 L.Projection.Mercator;
 L.control.scale({maxWidth: 100, metric: true, imperial: true}).setPosition('bottomright').addTo(map);
 
@@ -894,6 +894,14 @@ var schooll3_ = L.layerGroup([schooll3]);
     var schooll4 = L.polygon(school4, {color: 'blue'}).addTo(map);
 schooll4.bindPopup("OBJECTID:4 </br> Name : New River C. School </br> Shape Area: 460");
 var schooll4_ = L.layerGroup([schooll4]);
+
+  var basemps = {
+  "Imagery": imag,
+  "Topographic": topo;
+}
+
+  var layerControl = L.control.layers(basemps).addTo(map);
+  
 </script>
 </body>
 </html>
