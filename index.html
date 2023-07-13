@@ -847,7 +847,6 @@ var grazing2 =
 ]; 
 var schooll = L.polygon(school, {color: 'blue'}).addTo(map);
 schooll.bindPopup("OBJECTID:1 </br> Name : New River C. School </br> Shape Area: 340");
-var school_ = L.layerGroup([schooll]); 
 
 var school2 = 
   [
@@ -859,7 +858,6 @@ var school2 =
 ];
   var schooll2 = L.polygon(school2, {color: 'blue'}).addTo(map);
 schooll2.bindPopup("OBJECTID:2 </br> Name : New River C. School </br> Shape Area: 320");
-var schooll2_ = L.layerGroup([schooll2]); 
 
 var school3 = 
   [
@@ -871,7 +869,6 @@ var school3 =
 ];
   var schooll3 = L.polygon(school3, {color: 'blue'}).addTo(map);
 schooll3.bindPopup("OBJECTID:3 </br> Name : New River C. School </br> Shape Area: 320");
-var schooll3_ = L.layerGroup([schooll3]);
 
   var school4 = 
   [
@@ -883,7 +880,6 @@ var schooll3_ = L.layerGroup([schooll3]);
 ];
     var schooll4 = L.polygon(school4, {color: 'blue'}).addTo(map);
 schooll4.bindPopup("OBJECTID:4 </br> Name : New River C. School </br> Shape Area: 460");
-var schooll4_ = L.layerGroup([schooll4]);
 
   var deep_ = L.layerGroup([deepp]);
   var grazingg_ = L.layerGroup([grazingg, grazingg2]); 
@@ -891,6 +887,7 @@ var schooll4_ = L.layerGroup([schooll4]);
   var local_roadd_ = L.layerGroup([local_roadd, local_roadd2, local_roadd3]);
   var main_road_ = L.layerGroup([main_roadd]);
   var river_ = L.layerGroup([river]);
+  var school_ = L.layerGroup([schooll, schooll2, schooll3]); 
 
   var basemps = {
   "Imagery": imag,
@@ -904,6 +901,7 @@ var schooll4_ = L.layerGroup([schooll4]);
    "Local road": local_roadd_,
     "Main Road" : main_road_,
    "river" : river_
+   "school" : school_ 
   }
 
   var layerControl = L.control.layers(basemps, lyrs).addTo(map);
