@@ -389,8 +389,6 @@ layer.bindPopup(feature.properties.Name);
           }
 }).addTo(map);
 
-   var river_ = L.layerGroup([river]);
-
  var deep = [
                                         [-29.655891838015599, 30.898007253621337],
                                         [-29.655894675668726, 30.898025322334956],
@@ -413,7 +411,6 @@ layer.bindPopup(feature.properties.Name);
                                       ];
 var deepp = L.polygon(deep, {color: 'red'}).addTo(map);
   deepp.bindPopup("OBJECTID:1 </br> Shape Length :156 </br> Shape Area:411 </br> Type : Deep Tunnel");
-  var deepp_ = L.layerGroup([deepp]);
 
   var hiking = [
                                                         [-29.633460305545132, 30.894557130940534],
@@ -457,7 +454,6 @@ var deepp = L.polygon(deep, {color: 'red'}).addTo(map);
   ];
  var hikingg = L.polyline(hiking, {color: 'rgb(255, 130, 130)'}).addTo(map);
   hikingg.bindPopup("OBJECTID:1 </br> Shape Length:904.9164095437061 </br> Type : Hiking Trail");
-  var hikingg_ = L.layerGroup([hikingg]);
 
 var hiking2  = [
                                                         [-29.651758115222304, 30.89475889345168],
@@ -895,12 +891,18 @@ var schooll3_ = L.layerGroup([schooll3]);
 schooll4.bindPopup("OBJECTID:4 </br> Name : New River C. School </br> Shape Area: 460");
 var schooll4_ = L.layerGroup([schooll4]);
 
+  var hikingt = L.layerGroup([hikingg, hikingg2, hikingg3]);
+
   var basemps = {
   "Imagery": imag,
   "Topographic": topo
 }
 
-  var layerControl = L.control.layers(basemps).addTo(map);
+  var lyrs = {
+   "Hiking Trail": hikingt 
+  }
+
+  var layerControl = L.control.layers(basemps, lyrs).addTo(map);
   
 </script>
 </body>
