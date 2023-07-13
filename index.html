@@ -984,7 +984,7 @@ layer.bindPopup(feature.properties.Name);
           L.geoJSON(school_road, {
   style : school_style
 }).addTo(map);
-L.geoJSON(school_road, {
+L.geoJSON(school, {
 onEachFeature: function(feature, layer) {
 layer.bindPopup(feature.properties.Name);
           }
