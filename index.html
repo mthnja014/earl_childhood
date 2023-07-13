@@ -891,7 +891,11 @@ var schooll3_ = L.layerGroup([schooll3]);
 schooll4.bindPopup("OBJECTID:4 </br> Name : New River C. School </br> Shape Area: 460");
 var schooll4_ = L.layerGroup([schooll4]);
 
+  var deep_ = L.layerGroup([deep]);
   var hikingt = L.layerGroup([hikingg, hikingg2, hikingg3]);
+  var river_ = L.layerGroup([river]);
+
+  var 
 
   var basemps = {
   "Imagery": imag,
@@ -899,7 +903,9 @@ var schooll4_ = L.layerGroup([schooll4]);
 }
 
   var lyrs = {
-   "Hiking Trail": hikingt 
+    "Deep Tunnel" : deep_,
+   "Hiking Trail": hikingt,
+   "river" : river_
   }
 
   var layerControl = L.control.layers(basemps, lyrs).addTo(map);
