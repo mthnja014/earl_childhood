@@ -109,7 +109,7 @@ L.control.scale({maxWidth: 100, metric: true, imperial: true}).setPosition('bott
     "weight": 5,
     "opacity": 0.65
 };
-  var river = {"type":"FeatureCollection",
+  var river = [{"type":"FeatureCollection",
                "features":[{"type":"Feature","id":1,
                  "geometry":{"type":"LineString",
                              "coordinates":[[30.892187480323908,-29.634605015896952],
@@ -372,8 +372,8 @@ L.control.scale({maxWidth: 100, metric: true, imperial: true}).setPosition('bott
                             "properties":{"OBJECTID":1,
                                           "Shape_Length":4378.0479433287546,
                                           "Name":"Umzinyathi River"}
-                           }
-                          ]}
+                           }]
+               }];
 
   L.geoJSON(river, {
   style : river_style
@@ -386,7 +386,7 @@ layer.bindPopup(feature.properties.Name);
 
    var river_ = L.layerGroup([river]);
 
- var deep = {"type":"FeatureCollection",
+ var deep = [{"type":"FeatureCollection",
              "features":[{"type":"Feature","id":1,
                           "geometry":{"type":"Polygon",
                                       "coordinates":[[
@@ -414,8 +414,8 @@ layer.bindPopup(feature.properties.Name);
                                         "Shape_Length":155.60906858037401,
                                         "Shape_Area":410.61234235344051,
                                         "Type":"Deep Tunnel"}
-                         }
-                        ]};
+                         }]
+             }];
     L.geoJSON(deep, {
   style : deep_style
 }).addTo(map);
@@ -426,7 +426,7 @@ layer.bindPopup(feature.properties.Type);
 }).addTo(map);
   var deep_ = L.layerGroup([deep]);
 
-  var hiking = {"type":"FeatureCollection",
+  var hiking = [{"type":"FeatureCollection",
                 "features":[{"type":"Feature","id":1,
                              "geometry":{"type":"LineString",
                                          "coordinates":[[30.894557130940534,-29.633460305545132],
@@ -538,8 +538,8 @@ layer.bindPopup(feature.properties.Type);
                              "properties":{"OBJECTID":3,
                                            "Shape_Length":199.5874690801877,
                                            "Type":"Hiking Trail"}
-                            }
-                           ]};
+                            }]
+               }];
       L.geoJSON(hiking, {
   style : hiking_style
 }).addTo(map);
@@ -550,7 +550,7 @@ layer.bindPopup(feature.properties.Type);
 }).addTo(map);
   var hiking_ = L.layerGroup([hiking]);
 
-var local_road = {"type":"FeatureCollection",
+var local_road = [{"type":"FeatureCollection",
                    "features":[{"type":"Feature","id":1,
                      "geometry":{"type":"LineString",
                                  "coordinates":[[30.894063747440402,-29.651397953584937],
@@ -620,8 +620,8 @@ var local_road = {"type":"FeatureCollection",
                                               "Shape_Length":175.23138684693458,
                                               "Name":null,
                                               "Type":"Local Rd"}
-                               }
-                              ]};
+                               }]
+                  }];
         L.geoJSON(local_road, {
   style : local_road_style
 }).addTo(map);
@@ -632,7 +632,7 @@ layer.bindPopup(feature.properties.Name);
 }).addTo(map);
   var local_road_ = L.layerGroup([local_road]);
 
- var grazing = {"type":"FeatureCollection",
+ var grazing = [{"type":"FeatureCollection",
                 "features":[{"type":"Feature","id":2,
                   "geometry":{"type":"Polygon",
                               "coordinates":[[
@@ -858,8 +858,8 @@ layer.bindPopup(feature.properties.Name);
                                            "Shape_Length":5474.7894543213824,
                                            "Shape_Area":593259.11965263309,
                                            "Type":"Grazing Field"}
-                            }
-                           ]};
+                            }]
+                }];
   L.geoJSON(grazing, {
   style : grazing_style
 }).addTo(map);
@@ -871,7 +871,7 @@ layer.bindPopup(feature.properties.Type);
 
    var grazing_ = L.layerGroup([grazing]);
 
-  var main_road = {"type":"FeatureCollection",
+  var main_road = [{"type":"FeatureCollection",
                    "features":[{"type":"Feature","id":1,
                                 "geometry":{"type":"LineString",
                                             "coordinates":[[30.895866861150058,-29.637562102876508],
@@ -908,8 +908,8 @@ layer.bindPopup(feature.properties.Type);
                                               "Shape_Length":1987.0046013835524,
                                               "Name":"M25",
                                               "Type":"Main Road"}
-                               }
-                              ]};
+                               }]
+                  }];
         L.geoJSON(main_road, {
   style : main_road_style
 }).addTo(map);
@@ -920,7 +920,7 @@ layer.bindPopup(feature.properties.Name);
 }).addTo(map);
   var main_road_ = L.layerGroup([main_road]);
 
-  var school = {"type":"FeatureCollection",
+  var school = [{"type":"FeatureCollection",
                 "features":[{"type":"Feature","id":1,
                              "geometry":{"type":"Polygon",
                                          "coordinates":[[
@@ -980,8 +980,8 @@ layer.bindPopup(feature.properties.Name);
                                            "Shape_Length":99.563891394293492,
                                            "Shape_Area":456.97739912368496,
                                            "Name":"New River C. School"}
-                            }
-                           ]};
+                            }]
+                }];
           L.geoJSON(school, {
   style : school_style
 }).addTo(map);
