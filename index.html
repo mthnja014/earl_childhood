@@ -531,7 +531,6 @@ var local_road =
   ];
      var local_roadd = L.polyline(local_road, {color: 'orange'}).addTo(map);
   local_roadd.bindPopup("OBJECTID:1 </br> Shape Length: 129.3562295855258 </br> Name : Ntabende Rd </br> Type : Local Rd");
-  var local_roadd_ = L.layerGroup([local_roadd]);
 
 var local_road2 = 
   [                                                        [-29.638597047346792, 30.895204490171945],
@@ -567,7 +566,6 @@ var local_road2 =
    ];
       var local_roadd2 = L.polyline(local_road2, {color: 'orange'}).addTo(map);
   local_roadd2.bindPopup("OBJECTID:2 </br> Shape Length: 765 </br> Name : 300256 St </br> Type : Local Rd");
-  var local_roadd2_ = L.layerGroup([local_roadd2]); 
 
 var local_road3   =
   [
@@ -582,8 +580,7 @@ var local_road3   =
                                                            [-29.633566261381564, 30.893029495494243]
 ];
       var local_roadd3 = L.polyline(local_road3, {color: 'orange'}).addTo(map);
-  local_roadd3.bindPopup("OBJECTID:3 </br> Shape Length: 175 </br> Name : null </br> Type : Local Rd");
-  var local_roadd3_ = L.layerGroup([local_roadd3]); 
+  local_roadd3.bindPopup("OBJECTID:3 </br> Shape Length: 175 </br> Name : null </br> Type : Local Rd"); 
 
  var grazing = 
    [
@@ -893,7 +890,9 @@ var schooll4_ = L.layerGroup([schooll4]);
 
   var deep_ = L.layerGroup([deepp]);
   var hikingt = L.layerGroup([hikingg, hikingg2, hikingg3]);
+  var local_roadd_ = L.layerGroup([local_roadd, local_roadd3, local_roadd3]);
   var river_ = L.layerGroup([river]);
+
 
   var 
 
@@ -903,7 +902,7 @@ var schooll4_ = L.layerGroup([schooll4]);
 }
 
   var lyrs = {
-    "Deep Tunnel" : deep_,
+   "Deep Tunnel" : deep_,
    "Hiking Trail": hikingt,
    "river" : river_
   }
