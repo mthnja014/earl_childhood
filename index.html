@@ -740,7 +740,6 @@ var local_road3   =
    ];
   var grazingg = L.polygon(grazing, {color: 'green'}).addTo(map);
   grazingg.bindPopup("OBJECTID:1 </br> Shape Area: 530948 </br> Type : Grazing Field");
-  var grazingg_ = L.layerGroup([grazingg]); 
   
 var grazing2 = 
   [
@@ -802,8 +801,7 @@ var grazing2 =
 ];
   var grazingg2 = L.polygon(grazing2, {color: 'green'}).addTo(map);
   grazingg2.bindPopup("OBJECTID:2 </br> Shape Area: 593259 </br> Type : Grazing Field");
-  var grazingg2_ = L.layerGroup([grazingg2]); 
-  
+
   var main_road = 
     [
                                                            [-29.637562102876508, 30.895866861150058],
@@ -889,6 +887,7 @@ schooll4.bindPopup("OBJECTID:4 </br> Name : New River C. School </br> Shape Area
 var schooll4_ = L.layerGroup([schooll4]);
 
   var deep_ = L.layerGroup([deepp]);
+  var grazingg_ = L.layerGroup([grazingg, grazingg2]); 
   var hikingt = L.layerGroup([hikingg, hikingg2, hikingg3]);
   var local_roadd_ = L.layerGroup([local_roadd, local_roadd3, local_roadd3]);
   var river_ = L.layerGroup([river]);
@@ -900,6 +899,7 @@ var schooll4_ = L.layerGroup([schooll4]);
 
   var lyrs = {
    "Deep Tunnel" : deep_,
+    "Forest" : grazingg_,
    "Hiking Trail": hikingt,
    "Local road": local_roadd_,
    "river" : river_
