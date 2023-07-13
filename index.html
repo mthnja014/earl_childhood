@@ -836,7 +836,6 @@ var grazing2 =
   ];
   var main_roadd = L.polyline(main_road, {color: 'brown'}).addTo(map);
   main_roadd.bindPopup("OBJECTID:1 </br> Shape Length: 1987 </br> Name:M25 <br> Type : Main Rd.");
-  var main_road_ = L.layerGroup([main_roadd]); 
 
   var school =
   [
@@ -890,6 +889,7 @@ var schooll4_ = L.layerGroup([schooll4]);
   var grazingg_ = L.layerGroup([grazingg, grazingg2]); 
   var hikingt = L.layerGroup([hikingg, hikingg2, hikingg3]);
   var local_roadd_ = L.layerGroup([local_roadd, local_roadd3, local_roadd3]);
+  var main_road_ = L.layerGroup([main_roadd]);
   var river_ = L.layerGroup([river]);
 
   var basemps = {
@@ -902,6 +902,7 @@ var schooll4_ = L.layerGroup([schooll4]);
     "Forest" : grazingg_,
    "Hiking Trail": hikingt,
    "Local road": local_roadd_,
+    "Main Road" : main_road_,
    "river" : river_
   }
 
