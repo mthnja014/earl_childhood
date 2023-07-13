@@ -386,10 +386,7 @@ layer.bindPopup(feature.properties.Name);
 
    var river_ = L.layerGroup([river]);
 
- var deep = [{"type":"FeatureCollection",
-             "features":[{"type":"Feature","id":1,
-                          "geometry":{"type":"Polygon",
-                                      "coordinates":[[
+ var deep = [
                                         [30.898007253621337,-29.655891838015599],
                                         [30.898025322334956,-29.655894675668726],
                                         [30.898080955898831,-29.655758919442032],
@@ -408,23 +405,9 @@ layer.bindPopup(feature.properties.Name);
                                         [30.898059728708652,-29.655741724878887],
                                         [30.898038968642428,-29.655762067016344],
                                         [30.898007253621337,-29.655891838015599]
-                                      ]]
-                                     },
-                          "properties":{"OBJECTID":1,
-                                        "Shape_Length":155.60906858037401,
-                                        "Shape_Area":410.61234235344051,
-                                        "Type":"Deep Tunnel"}
-                         }]
-             }];
-    L.geoJSON(deep, {
-  style : deep_style
-}).addTo(map);
-L.geoJSON(deep, {
-onEachFeature: function(feature, layer) {
-layer.bindPopup(feature.properties.Type);
-          }
-}).addTo(map);
-  var deep_ = L.layerGroup([deep]);
+                                      ];
+var deepp = L.polygon(deep, {color: 'red'}).addTo(map);
+  var deepp_ = L.layerGroup([deepp]);
 
   var hiking = [{"type":"FeatureCollection",
                 "features":[{"type":"Feature","id":1,
