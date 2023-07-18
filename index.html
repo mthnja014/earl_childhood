@@ -48,10 +48,7 @@ margin: 0;
 }
 </style>
 <body>
-<div id="banner">
-<p>#</p></div><br>
-<div>
-
+  
 <div class="mp" id="map">
 <a href="https://www.maptiler.com" style="position:absolute;left:10px;bottom:10px;z-index:999;"></a>
 </div>
@@ -66,8 +63,8 @@ attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_bla
 style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${key}`
 }).addTo(map);
   
-var imag = L.esri.basemapLayer("Imagery").addTo(map);
 var topo = L.esri.basemapLayer("Topographic").addTo(map);
+var imag = L.esri.basemapLayer("Imagery").addTo(map);
 
 L.Projection.Mercator;
 L.control.scale({maxWidth: 100, metric: true, imperial: true}).setPosition('bottomright').addTo(map);
