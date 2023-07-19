@@ -817,10 +817,17 @@ var grazing2 =
   var grazingg2 = L.polygon(grazing2, {color: 'green'}).addTo(map);
   grazingg2.bindPopup("OBJECTID:2 </br> Shape Area: 593259 </br> Type : Grazing Field");
 
-  var main_road = 
+  var main__road = 
     [
                                                            [-29.637562102876508, 30.895866861150058],
                                                            [-29.638316595706769, 30.89533325648139 ],
+                                                           [-29.638597047346792, 30.895204490171945]
+      ];
+  var main__roadd = L.polyline(main__road, {color: 'brown'}).addTo(map);
+  main_roadd.bindPopup("OBJECTID:2 </br> Shape Length: 90 </br> Name:M25 <br> Type : Main Rd.");
+  
+  var main_road = 
+    [                                                                 
                                                            [-29.638597047346792, 30.895204490171945],
                                                            [-29.638967960038599, 30.895034189357006],
                                                            [-29.639381496245644, 30.894901309661851],
@@ -851,7 +858,7 @@ var grazing2 =
                                                            [-29.65163371934209, 30.893927304128532]
   ];
   var main_roadd = L.polyline(main_road, {color: 'brown'}).addTo(map);
-  main_roadd.bindPopup("OBJECTID:1 </br> Shape Length: 1987 </br> Name:M25 <br> Type : Main Rd.");
+  main_roadd.bindPopup("OBJECTID:1 </br> Shape Length: 1861 </br> Name:M25 <br> Type : Main Rd.");
 
   var school =
   [
