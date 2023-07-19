@@ -331,7 +331,7 @@ L.control.scale({maxWidth: 100, metric: true, imperial: true}).setPosition('bott
                                             [-29.65429414383798, 30.89768203564071],
                                             [-29.65428139410189, 30.89777720316191]
 ];
-var riverr = L.polygon(river, {color: 'red'}).addTo(map);
+var riverr = L.polyline(river, {color: 'blue'}).addTo(map);
   riverr.bindPopup("OBJECTID:1 </br> Name: Umzinyathi River");
 
   L.geoJSON(river, {
