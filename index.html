@@ -18,7 +18,7 @@
 <style type="text/css">
 #map {
 position: absolute; 
-top:117px;
+top:0px;
 right: 0px; 
 bottom: 0px;
 left: 0px;
@@ -62,6 +62,11 @@ const gl = L.maplibreGL({
 attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
 style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${key}`
 }).addTo(map);
+
+const hikerIcon = L.icon({
+  iconUrl: "http://static.arcgis.com/images/Symbols/NPS/npsPictograph_0231b.png",
+  iconSize: [18, 18]
+});
   
 var topo = L.esri.basemapLayer("Topographic").addTo(map);
 var imag = L.esri.basemapLayer("Imagery").addTo(map);
@@ -517,6 +522,8 @@ var hiking2  = [
   hikingg3.bindPopup("OBJECTID:2 </br> Shape Length: 199.5874690801877 </br> Type : Hiking Trail");
   var hikingg3_ = L.layerGroup([hikingg3]);
 
+  var hikingg3__ =L.marker([-29.634188022925269, 30.8933856586397797], {icon: hikerIcon}).addTo(map);
+
 var local_road = 
   [                                             [-29.651397953584937, 30.894063747440402],
                                                 [-29.65151442349935, 30.894362974464936],
@@ -646,7 +653,7 @@ var local_road3   =
                                 [-29.630031039199022, 30.898171013802678],
                                 [-29.629727092911434, 30.898273771189725],
                                 [-29.629443625907182, 30.898319464894954],
-                                [29.629061130068823, 30.89845504402755]  ,
+                                [-29.629061130068823, 30.89845504402755]  ,
                                 [-29.628934578312137, 30.898298084092865],
                                 [-29.628601751774202, 30.898315038895554],
                                 [-29.628571555171838, 30.898533083371191],
