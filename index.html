@@ -528,7 +528,8 @@ var hiking2  = [
   var hikingg3__ =L.marker([-29.634188022925269, 30.8933856586397797], {icon: hikerIcon}).addTo(map);
 
 var local_road = 
-  [                                             [-29.651397953584937, 30.894063747440402],
+  [
+                                                [-29.651397953584937, 30.894063747440402],
                                                 [-29.65151442349935, 30.894362974464936],
                                                 [-29.651604863828975, 30.894527720996454],
                                                 [-29.651723874616412, 30.894701466850499],
@@ -537,7 +538,7 @@ var local_road =
                                                 [-29.651788846663589, 30.895093665913667]
   ];
      var local_roadd = L.polyline(local_road, {color: 'orange'}).addTo(map);
-  local_roadd.bindPopup("OBJECTID:1 </br> Shape Length: 129.3562295855258 </br> Name : Ntabende Rd </br> Type : Local Rd");
+  local_roadd.bindPopup("OBJECTID:1 </br> Shape Length: 130 </br> Name : Ntabende Rd </br> Type : Local Rd");
 
 var local_road2 = 
   [                                                        [-29.638597047346792, 30.895204490171945],
@@ -855,10 +856,18 @@ var grazing2 =
                                                            [-29.650902305023887, 30.894441030876592],
                                                            [-29.651167282800238, 30.894233319721664],
                                                            [-29.651397953584937, 30.894063747440402],
+      ];
+
+    var main_roadd = L.polyline(main_road, {color: 'brown'}).addTo(map);
+  main_roadd.bindPopup("OBJECTID:1 </br> Shape Length: 1861 </br> Name:M25 <br> Type : Main Rd.");
+  
+  var main___road = 
+   [                                                       [-29.651397953584937, 30.894063747440402],
                                                            [-29.65163371934209, 30.893927304128532]
   ];
+  
   var main_roadd = L.polyline(main_road, {color: 'brown'}).addTo(map);
-  main_roadd.bindPopup("OBJECTID:1 </br> Shape Length: 1861 </br> Name:M25 <br> Type : Main Rd.");
+  main_roadd.bindPopup("OBJECTID:3 </br> Shape Length: 20 </br> Name:M25 <br> Type : Main Rd.");
 
   var school =
   [
