@@ -533,12 +533,22 @@ var local_road =
                                                 [-29.65151442349935, 30.894362974464936],
                                                 [-29.651604863828975, 30.894527720996454],
                                                 [-29.651723874616412, 30.894701466850499],
+                                                [-29.651758115222304, 30.89475889345168],
+    ];
+       var local_roadd = L.polyline(local_road, {color: 'orange'}).addTo(map);
+  local_roadd.bindPopup("OBJECTID:1 </br> Shape Length: 99 </br> Name : Ntabende Rd </br> Type : Local Rd");
+  
+var local__road = 
+  [
+    
+                                                [-29.651758115222304, 30.89475889345168],    
                                                 [-29.651795217786304, 30.89482112064972],
                                                 [-29.651798065703794, 30.894941964716693],
                                                 [-29.651788846663589, 30.895093665913667]
   ];
-     var local_roadd = L.polyline(local_road, {color: 'orange'}).addTo(map);
-  local_roadd.bindPopup("OBJECTID:1 </br> Shape Length: 130 </br> Name : Ntabende Rd </br> Type : Local Rd");
+
+     var local__roadd = L.polyline(local__road, {color: 'orange'}).addTo(map);
+  local__roadd.bindPopup("OBJECTID:1 </br> Shape Length: 31 </br> Name : Ntabende Rd </br> Type : Local Rd");
 
 var local_road2 = 
   [                                                        [-29.638597047346792, 30.895204490171945],
