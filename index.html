@@ -334,15 +334,6 @@ L.control.scale({maxWidth: 100, metric: true, imperial: true}).setPosition('bott
 var riverr = L.polyline(river, {color: 'blue'}).addTo(map);
   riverr.bindPopup("OBJECTID:1 </br> Name: Umzinyathi River");
 
-  L.geoJSON(river, {
-  style : river_style
-}).addTo(map);
-L.geoJSON(river, {
-onEachFeature: function(feature, layer) {
-layer.bindPopup(feature.properties.Name);
-          }
-}).addTo(map);
-
  var deep = [
                                         [-29.655891838015599, 30.898007253621337],
                                         [-29.655894675668726, 30.898025322334956],
